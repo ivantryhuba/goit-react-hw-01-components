@@ -42,11 +42,15 @@
   "devDependencies": {
     "eslint": "^7.30.0",
     "gh-pages": "^3.2.3",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.0.0",
     "prettier": "^2.3.2",
     "prop-types": "^15.7.2"
   },
   "lint-staged": {
     "*.{js,jsx}": "eslint --cache --fix",
-    "*.{js,jsx,scss,css,md}": "prettier --write"
+    "*.{js,jsx,scss,css,md}": "prettier --write",
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
   }
 }
