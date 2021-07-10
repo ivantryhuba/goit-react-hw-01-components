@@ -1,5 +1,17 @@
+import PropTypes from "prop-types";
+import defaultAvatar from "./avatar.jpg";
+
 export default function UserProfile(props) {
-  const { avatar, name, tag, location, followers, views, likes } = props;
+  const {
+    avatar = defaultAvatar,
+    name,
+    tag,
+    location,
+    followers,
+    views,
+    likes,
+  } = props;
+
   return (
     <div>
       <div>
@@ -26,3 +38,13 @@ export default function UserProfile(props) {
     </div>
   );
 }
+
+UserProfile.propTypes = {
+  avatar: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  followers: PropTypes.number.isRequired,
+  views: PropTypes.number.isRequired,
+  likes: PropTypes.number.isRequired,
+};
