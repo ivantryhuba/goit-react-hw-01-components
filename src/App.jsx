@@ -1,5 +1,5 @@
 import user from "./data/user.json";
-import statistics from "./data/statistics.json";
+import statistics from "./data/statistical-data.json";
 import friends from "./data/friends.json";
 import transactions from "./data/transactions.json";
 
