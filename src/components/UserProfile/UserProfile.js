@@ -1,6 +1,8 @@
 import PropTypes from "prop-types";
 import defaultAvatar from "./avatar.jpg";
 
+import styles from "./UserProfile.module.css";
+
 export default function UserProfile(props) {
   const {
     avatar = defaultAvatar,
@@ -13,26 +15,26 @@ export default function UserProfile(props) {
   } = props;
 
   return (
-    <div>
-      <div>
-        <img src={avatar} alt={name} />
-        <p>{name}</p>
-        <p>@{tag}</p>
-        <p>{location}</p>
+    <div className={styles.UserProfile}>
+      <div className={styles.Description}>
+        <img className={styles.Avatar} src={avatar} alt={name} />
+        <p className={styles.Name}>{name}</p>
+        <p className={styles.Tag}>@{tag}</p>
+        <p className={styles.Location}>{location}</p>
       </div>
 
-      <ul>
+      <ul className={styles.Stats}>
         <li>
-          <span>Followers</span>
-          <span>{followers}</span>
+          <span className={styles.Label}>Followers</span>
+          <span className={styles.Quantity}>{followers}</span>
         </li>
         <li>
-          <span>Views</span>
-          <span>{views}</span>
+          <span className={styles.Label}>Views</span>
+          <span className={styles.Quantity}>{views}</span>
         </li>
         <li>
-          <span>Likes</span>
-          <span>{likes}</span>
+          <span className={styles.Label}>Likes</span>
+          <span className={styles.Quantity}>{likes}</span>
         </li>
       </ul>
     </div>
